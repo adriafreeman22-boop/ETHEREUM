@@ -29,18 +29,19 @@
         }
 
 .interactBtn {
-    display: block;
+    display: inline-block;       /* allows width to adjust to content */
     margin: -30px auto 40px auto;
     font-family: "HK Nova Bold", sans-serif;
     font-size: 18px;
-    padding: 12px 36px; /* increased horizontal padding from 24px → 36px */
+    padding: 12px 48px;          /* more horizontal padding for long text */
     cursor: pointer;
     background: linear-gradient(90deg, #4f5bd5 0%, #8a3ab9 50%, #ff7f50 100%);
     color: white;
     border: none;
     border-radius: 8px;
     transition: transform 0.2s, box-shadow 0.2s;
-    white-space: nowrap; /* prevents the text from wrapping to the next line */
+    white-space: nowrap;          /* ensures text stays on one line */
+    text-align: center;           /* centers text inside button */
 }
 
 

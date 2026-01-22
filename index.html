@@ -29,20 +29,31 @@
         }
 
 .interactBtn {
-    display: block;               /* keeps the button as block so margin auto works */
-    width: max-content;           /* makes the width adjust to the text */
-    margin: -30px auto 40px auto; /* centers the button horizontally */
+    display: block;               /* keeps margin: auto centering */
+    width: max-content;           /* button grows to fit text */
+    min-width: 300px;             /* ensures button is visually wide enough */
+    margin: -30px auto 40px auto; /* centers horizontally */
     font-family: "HK Nova Bold", sans-serif;
     font-size: 18px;
-    padding: 12px 48px;           /* enough horizontal space for long text */
+    padding: 12px 48px;           /* space around text */
     cursor: pointer;
     background: linear-gradient(90deg, #4f5bd5 0%, #8a3ab9 50%, #ff7f50 100%);
     color: white;
     border: none;
     border-radius: 8px;
     transition: transform 0.2s, box-shadow 0.2s;
-    white-space: nowrap;          /* prevents text from wrapping */
+    white-space: nowrap;          /* keeps text on one line */
     text-align: center;           /* centers text inside button */
+    box-sizing: border-box;       /* ensures padding adds to width nicely */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+    .interactBtn {
+        padding: 12px 24px;       /* smaller padding on small screens */
+        font-size: 16px;          /* slightly smaller text */
+        min-width: 200px;         /* minimum width for mobile */
+    }
 }
 
 
